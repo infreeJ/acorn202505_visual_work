@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step10_Array3.html</title>
+</head>
+<body>
+  
+  <script>
+
+    const nums = [10, -10, -20, 20, 30, -50, 60];
+    // 위의 배열에서 음수를 제거한 새로운 배열을 얻어내려면?
+
+    const nums2 = nums.filter((item) => {
+      console.log(item);
+      return item >= 0
+    })
+    console.log(nums2); // [10, 20, 30, 60]
+
+
+    const myNums = [1,2,3,4,5,6,7,8,9,10]
+    // myNums 배열에서 짝수를 제외한 홀수로만 이루어진 새로운 배열을 얻어내려면?
+
+    const odd = myNums.filter((item) => {
+      return item % 2 == 1;
+    })
+    console.log(odd);
+    
+    
+  </script>
+</body>
+</html>

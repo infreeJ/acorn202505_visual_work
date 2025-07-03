@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step10_Array2.html</title>
+</head>
+<body>
+
+  <ul class="nameUl">
+
+  </ul>
+  
+  <script>
+    const names1 = ["김구라", "해골", "원숭이"];
+    const names2 = names1.map((item) => {
+      return item+"님";
+    })
+    console.log(names2);
+
+    // names 배열을 이용해서
+    // ["<li>김구라</li>", "<li>해골</>", "<li>원숭이</li>"] 배열을 만들고
+    // 참조값을 names3에 담아보세요
+
+    const nameUl = document.querySelector(".nameUl")
+    
+    const names3 = names1.map(item => `<li>${item}</li>`)
+
+    console.log(names3);
+
+    names3.forEach((item) => {
+      const newLi = document.createElement("li");
+      newLi.innerHTML = item;
+      nameUl.append(newLi)
+    })
+    
+    
+
+    
+    
+
+  </script>
+</body>
+</html>
